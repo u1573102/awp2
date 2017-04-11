@@ -1,0 +1,39 @@
+<section class="content login">
+	<h1>Add News</h1>
+	<form action="" method="post" enctype="multipart/form-data">
+	<table>
+		<tr>
+			<td>News Title: </td>
+			<td><input type="text" name="n_name" placeholder="Enter your News title" /></td>
+		</tr>
+		<tr>
+			<td>Category Name: </td>
+			<td>
+				<select name="n_catid" style="width: 105%;">
+					{% for u in record %}
+					<option value="{{ u.0 }}">{{ u.1 }}</option>
+					{% endfor %}
+				</select>
+		</tr>
+		<tr>
+			<td>Image: </td>
+			<td><input type="file" name="myfile"/></td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>
+				<textarea name="n_desc" rows="5"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" name="submit" value="Submit" /></td>
+		</tr>
+		</form>
+	</table>
+</section>
+
+</div>
+<!--end container-->
+</body>
+</html>

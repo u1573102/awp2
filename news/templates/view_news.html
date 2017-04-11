@@ -1,0 +1,36 @@
+  {% load staticfiles %}
+<section class="content login view" style="width: 812px;">
+	<h1>View News</h1>
+	<table>
+		<tr>
+			<th>#</th>
+			<td>Title</td>
+      		<td>Description</td>
+      		<td>Category</td>
+      		<td>Image</td>
+      		<td>Edit</td>
+      		<td>Delete</td>
+		</tr>
+		{% for u in record %}
+    <tr>	
+     <td>{{ u.0 }}</td>
+     <td>{{ u.1 }}</td>
+     <td>{{ u.2 }}</td>
+     <td>{{ u.5 }}</td>
+     <td>
+       <img src="{% static 'media' %}/{{ u.3 }}" alt="" height="100" width="100">
+     </td>
+     <!--EDIT-->                        
+     <td><a href="/edit_news/{{ u.0 }}">Edit</a></td>
+     <!--DELETE-->
+     <td><a href="/delete_news/{{ u.0 }}">Delete</a></td>
+
+   </tr>
+   {% endfor %}
+	</table>
+</section>
+
+</div>
+<!--end container-->
+</body>
+</html>

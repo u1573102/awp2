@@ -1,0 +1,24 @@
+
+
+<section class="content login view" style="width: 812px;">
+	<h1>View User</h1>
+	<table>
+		<tr>
+			<th>#</th>
+			<th>Username</th>
+			<th>Email</th>
+		</tr>
+		{% for u in record %}
+		<tr>
+			<td>{{ u.0 }}</td>
+			<td>{{ u.1 }}</td>
+			<td>{{ u.3 }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</section>
+
+</div>
+<!--end container-->
+</body>
+</html>

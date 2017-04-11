@@ -1,0 +1,249 @@
+@font-face{
+	font-family: libel-suit-rg;
+	src: url(../font/libel-suit-rg.ttf);
+}
+@font-face{
+	font-family: roboto-light;
+	src: url(../font/roboto-light.ttf);
+}
+@font-face{
+	font-family: roboto-Bold;
+	src: url(../font/roboto-Bold.ttf);
+}
+@font-face{
+	font-family: MontserratAlternates-Bold;
+	src: url(../font/MontserratAlternates-Bold.ttf);
+}
+@font-face{
+	font-family: MontserratAlternates-Regular;
+	src: url(../font/MontserratAlternates-Regular.ttf);
+}
+@font-face{
+	font-family: Montserrat-ExtraLight;
+	src: url(../font/Montserrat-ExtraLight.ttf);
+}
+body{
+	background: #fff;
+	padding: 0;
+	margin: 0;
+}
+.container{
+	width: 1140px;
+	margin: 0 auto;
+}
+.pad{
+	padding: 10px;
+}
+header{
+    position: fixed;
+    font-family: roboto-bold;
+    background: #c80000;
+    padding: 5px;
+    width: 100%;
+    z-index: 1;
+}
+header a{
+	color: white;
+	text-decoration: none;
+}
+#logo{
+	float: left;
+	width: 200px;
+}
+.account{
+	float: right;
+	color: white;
+}
+.account ul{
+	margin: 0;
+}
+.account ul li{
+	display: inline;
+	margin: 0 10px;
+}
+.account ul li a{
+	text-decoration: none;
+}
+.account ul li a:hover{
+	color:#ccc;
+}
+aside h4{
+	font-family: MontserratAlternates-Regular;
+}
+header a:hover{
+	color: #ccc;
+}
+aside{
+    background: #f7f7f7;
+    width: 220px;
+    float: left;
+    position: fixed;
+    min-height: 1200px;
+    top: 29px;
+}
+aside nav{
+ 	padding: 0px 50px;
+}
+aside ul{
+	padding-left: 0;
+}
+aside ul li{
+	padding: 10px 0px;
+	list-style-type: none;
+	border-bottom: 1px solid #e5e5e5;
+}
+aside ul li:last-child{
+	border-bottom: none;
+}
+aside ul li img{
+	height: 14px;
+	width: 14px;
+	margin-right: 7px;
+}
+aside ul li a{
+    font-family: roboto-light;
+    text-decoration: none;
+    color: #636363;
+    transition: 0.5s;
+}
+aside ul li a:hover{
+	padding-left: 10px;
+}
+.content{
+	float: right;
+	width: 890px;
+	padding: 15px;
+}
+.content article img{
+	width: 100%;
+}
+.clear{
+	clear: both;
+}
+article.post img{
+	height: 250px;
+    width: 250px;
+    float: left;
+    margin-right: 15px;
+}
+h1, h2{
+	font-family: roboto-light;
+    text-align: center;
+    border-bottom: 1px solid #d7d7d7;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+h2{
+	font-size: 20px;
+	text-align: left;
+	font-family: MontserratAlternates-Regular;
+	margin-top: 0px;
+	border-bottom: none;
+}
+.post .p_detail{
+	float: right;
+	width: 625px;
+}
+.post .p_detail a{
+	color: black;
+	text-decoration: none;
+}
+.post .p_detail a:hover{
+	color: #757575;
+}
+.p_detail p{
+	font-family: Montserrat-ExtraLight;
+    line-height: 1.5em;
+    text-align: justify;
+}
+hr{
+    margin: 15px 0px;
+    border-color: rgba(255, 255, 255, 0.19);
+}
+.about-us p{
+	font-family: roboto-light;
+	line-height: 1.5em;
+    text-align: justify;
+}
+.contact{
+	background: url(../media/contact-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 500px;
+}
+.contact h1{
+	background: #fff;
+}
+.info-contact{
+	font-size: 23px;
+    float: right;
+    font-family: roboto-light;
+    width: 440px;
+    color: white;
+}
+.info-contact ul li{
+	list-style-type: none;
+ 	padding: 10px 2px;
+}
+.info-contact b{
+	font-size: 25px;
+}
+.login table{
+	font-family: roboto-light;
+    width: 50%;
+    margin: 0 auto;
+}
+.login table tr{
+	line-height: 80px;
+}
+.login table tr td input[type='text'],.login table tr td input[type='password'],.login table tr td input[type='email'],.login table tr td input[type='file'], .login table tr td textarea, .login table tr td select{
+	width: 100%;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+   	font-family: Montserrat-ExtraLight;
+
+}
+
+.login table tr td input[type='submit']{
+	background-color: #c80000;
+    padding: 8px 25px;
+    color: white;
+    text-align: left;
+    border: none;
+    font-family: roboto-bold;
+    box-shadow: 0 0 1px 0px #000;
+}
+.login table tr td input[type='submit']:hover{
+	color: #ccc;
+}
+.view{
+	width: 825px;
+}
+.view table{
+	text-align: center;
+	width:100%;
+}
+.view table tr{
+	line-height: 20px;
+}
+.view table tr:nth-child(even){
+	background-color: #e8e8e8;
+}
+.view table tr:nth-child(odd){
+	background-color: #f3f3f3;
+}
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border: 2px solid #c80000;
+    color: black;
+    text-decoration: none; 
+}
+.button:hover {
+    background-color: #c80000; /* Green */
+    color: white;
+}
+.marked{
+	background-color: #c80000; /* Green */
+    color: white;
+}

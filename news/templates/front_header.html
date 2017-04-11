@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load staticfiles %}
+	<title>NewsTribe</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}">
+</head>
+<body>
+
+	<!-- ***********HEADER************* -->
+	<header>
+		<div class="container">
+			<div id="logo">
+				<a href="/">The News</a>
+			</div>
+			<div class="account">
+				<ul>
+					{% if request.session.u_name %}
+					<li><a href="/bookmarknews/">BookMarks</a></li>
+					<li><a href="/userlogout/">Logout</a></li>
+					{% else %}
+					<li><a href="/login/">Login</a></li>
+					<li><a href="/signup/">SignUp</a></li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<!-- **********SIDEBAR*************-->
+	<div class="container">
+		<aside>
+			<nav>
+				<ul>
+					<li><img src="{% static 'media' %}/home-icon.png"><a href="/">Home</a></li>
+					<li><img src="{% static 'media' %}/news-icon.png"><a href="/news/">News</a></li>
+					<li><img src="{% static 'media' %}/about-icon.png"><a href="/about/">About Us</a></li>
+					<li><img src="{% static 'media' %}/contact-icon.png"><a href="/contact/">Contact Us</a></li>
+				</ul>
+			</nav>
+			<br>
+			<h4>Category</h4><hr>
+			<nav>
+				<ul>
+					{% for c in record %}
+					<li><a href="/catnews/{{ c.0 }}"><img src="{% static 'media' %}/politics.png">{{ c.1 }}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</aside>

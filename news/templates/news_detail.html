@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<section class="content">
+	<h1>{{ detail.1 }}</h1>
+	<article>
+	{% if request.session.u_id %}
+		{% if detail.0 == post.1 %}		
+			<p><a href="/bookmarknews/" class="button">BookMarked</a></p>
+		{% endif %}
+		{% if detail.0 != post.1 %}		
+	<p><a href="/add_bookmarknews/{{ detail.0 }}" class="button">BookMark</a></p>
+	{% endif %}
+	{% endif %}
+
+
+	
+	
+		<img src="{% static 'media' %}/{{ detail.3 }}" alt="post 2" />
+		<div class="p_detail">
+			<p>{{ detail.2 }}</p>
+		</div> 
+	</article>
+	<div class="clear"></div>
+</section>

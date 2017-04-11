@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<section class="content login">
+	<h1>Edit News</h1>
+	<form action="" method="post" enctype="multipart/form-data">
+		<table>
+			<tr>
+				<td>News Title: </td>
+				<td><input type="text" name="n_name" value="{{ record.1 }}" placeholder="Enter your News title" /></td>
+			</tr>
+			<tr>
+				<td>Category Name: </td>
+				<td>
+					<select name="n_catid" style="width: 105%;">
+						{% for cat in category %}
+							{% if cat.0 == record.4 %}
+								<option value="{{ cat.0 }}">{{ cat.1 }}</option>
+							{% endif %}
+						{% endfor %}
+
+						{% for cat in category %}
+							{% if cat.0 != record.4 %}
+								<option value="{{ cat.0 }}">{{ cat.1 }}</option>
+							{% endif %}
+						{% endfor %}
+					</select>
+				</tr>
+				<tr>
+					<td>Image: </td>
+					<td><input type="file" name="myfile"/></td>
+				</tr>
+				<tr>
+					<td>Image: </td>
+					<td><img src="{% static 'media' %}/{{ record.3 }}" alt="" height="150" width="150"></td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td>
+						<textarea name="n_desc" rows="5">{{ record.2 }}</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" name="submit" value="Submit" /></td>
+				</tr>
+			</form>
+		</table>
+	</section>
+
+</div>
+<!--end container-->
+</body>
+</html>

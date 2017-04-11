@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<section class="content">
+	<article>
+		<img src="{% static 'media' %}/banner.jpg" alt="banner" />
+	</article>
+	<h1>Latest News</h1>
+	{% for n in news %}
+	<article class="post">
+		<img src="{% static 'media' %}/{{ n.3 }}" alt="{{ n.1 }}" />
+		<div class="p_detail">
+			<h2>
+				<a href="/newsdetail/{{ n.0 }}">{{ n.1 }}</a>
+			</h2>
+			<p>{{ n.2 }}</p>
+		</div> 
+	</article>
+	<div class="clear"></div>
+	<hr>
+	{% endfor %}
+</section>
+<!--end cotent-->
